@@ -1,4 +1,3 @@
-
 function printError(eleid, msg) {
     document.getElementById(eleid).innerHTML = msg
 }

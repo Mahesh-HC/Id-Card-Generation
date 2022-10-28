@@ -1,0 +1,184 @@
+/* changing styles of browser*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    margin: 30px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+h1 {
+    margin: 10px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    background-color: #4047F0;
+}
+
+/*form section*/
+
+form {
+    min-width: 400px;
+    max-width: 500px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    position: relative;
+    border-radius: 10px;
+    
+}
+.formSection{
+    margin-left: 20px;
+    
+}
+
+.formTitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+form input {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid grey;
+    background-color: rgb(228, 246, 252);
+    padding: 0 30px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#picture {
+    padding: 5px;
+    padding-left: 30px;
+}
+
+input:focus {
+    border: 2px solid lightskyblue;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    height: 45px;
+    background-color: lightskyblue;
+    border: 2px solid lightskyblue;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.1s ease;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/*form icons*/
+i {
+    position: absolute;
+    padding: 10px;
+}
+
+.failure-icon {
+    right: 50px;
+    color: red;
+    opacity: 0;
+}
+
+.success-icon {
+    right: 50px;
+    color: green;
+    opacity: 0;
+}
+
+.error {
+    color: red;
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+
+/*card details*/
+.formSection1 {
+    min-width: 450px;
+    max-width: 450px;
+    height: 280px;  
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+}
+
+.idContainer {
+    max-width: 160px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+#fileImage {
+    width: 150px;
+    height: 200px;
+    border: 2px solid #8f94fb;
+    border-radius: 10px;
+    padding: 45px 20px 45px 20px;
+    background-image: linear-gradient(to top, #4047F0, #8f94fb);
+}
+
+#output {
+    width: 110px;
+    height: 110px;
+
+}
+
+.cardinfo {
+    min-width: 450px;
+    max-width: 450px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px;
+    color: #4047F0;
+    margin-top: 15px;
+}
+
+span {
+    font-weight: bold;
+}
+
+/* media Queries*/
+@media  (min-width:320px) and (max-width:800px){
+ .container{
+    display: block;
+    margin: 10px;
+
+ }
+ h1{
+    width: auto;
+ }
+ 
+}

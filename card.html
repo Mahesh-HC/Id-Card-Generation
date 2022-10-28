@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Id Card Generator</title>
+    <link rel="stylesheet" href="card.css">
+    <script src="https://kit.fontawesome.com/bc457f0c70.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Id Card Generator</h1>
+    </header>
+    <div class="container">
+        <div class="formSection">
+
+            <form name="idCardForm" id="form" oninput="return validateForm()" onsubmit="return false">
+                <div class="formTitle">
+                    <h3>Enter Student Details</h3>
+                </div>
+                <!--User Name-->
+                <div class="formElement">
+                    <label for="username">Enter Name:</label>
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" name="username" id="username">
+                    <i class="fas fa-exclamation-circle failure-icon" id="failureIcon"></i>
+                    <i class="far fa-check-circle success-icon" id="successIcon"></i>
+                    <div class="error" id="userErr"></div>
+                </div>
+                <!--College Name-->
+
+                <div class="formElement">
+                    <label for="collegename">Enter College Name:</label>
+                    <i class="fa-solid fa-building-columns"></i>
+                    <input type="text" name="collegename" id="collegename">
+                    <i class="fas fa-exclamation-circle failure-icon" id="failureIcon1"></i>
+                    <i class="far fa-check-circle success-icon" id="successIcon1"></i>
+                    <div class="error" id="collegeErr"></div>
+                </div>
+                <!--Location-->
+                <div class="formElement">
+                    <label for="location">Enter Location:</label>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input type="text" name="location" id="location">
+                    <i class="fas fa-exclamation-circle failure-icon" id="failureIcon2"></i>
+                    <i class="far fa-check-circle success-icon" id="successIcon2"></i>
+                    <div class="error" id="locationErr"></div>
+                </div>
+                <!--Picture-->
+                <div class="formElement">
+                    <label for="picture">Enter Student's Picture:</label>
+                    <i class="fas fa-image"></i>
+                    <input type="file" name="picture" id="picture" onchange="loadFile(event)">
+                    <i class="fas fa-exclamation-circle failure-icon" id="failureIcon3"></i>
+                    <i class="far fa-check-circle success-icon" id="successIcon3"></i>
+                    <div class="error" id="pictureErr"></div>
+                </div>
+                <button type="submit" onclick="generateCard()">Generate Card</button>
+            </form>
+        </div>
+
+        <div class="formSection1" id="collegeCard">
+            <header>
+                <h2>Generated Card</h2>
+            </header>
+            <div class="idContainer">
+                <div id="imageSec">
+                    <div id="fileImage">
+                        <p><img id="output" width="100" height="100" /></p>
+                    </div>
+                </div>
+                <div class="cardinfo">
+                    <div class="cardinfo">
+                        <p>Username: <span id="personName"></span></p>
+                    </div>
+                    <div class="cardinfo">
+                        <p>College Name: <span id="college"></span></p>
+                    </div>
+                    <div class="cardinfo">
+                        <p>Location: <span id="locate"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Script Tag-->
+    <script src="card.js"></script>
+</body>
+
+</html>
